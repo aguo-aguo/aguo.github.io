@@ -1,16 +1,19 @@
 ---
-layout: base
+layout: default
 ---
-<div class="row">
-  <div class="col-md-13 aside3-title">
-    <br>
-    <h2 id="#identifier">{{ page.title }}</h2>
-  </div>
-  <div class="col-md-13 aside3-content">
-    <div id="page-content">
-      {{ content }}
-    </div>
+<div class="post-area post">
+    <header>
+        <h1>{{ page.title }}</h1>
+    </header>
     <hr>
-    {% include disqus.html %}
-  </div>
+    <article class="page-content">
+        {{ content }}
+    </article>
+</div>
+<div class="post-area post comment">
+    <!-- 多说评论框 start -->
+    
+    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="gaohaoyang.github.io{{ page.url }}"></div>
+    
+    <!-- 多说评论框 end -->
 </div>
